@@ -1,0 +1,14 @@
+n=int(input("enter: ")) 
+
+
+print(f"Prime numbers between 100 and 1000:")
+for num_to_check in range(100, 1000):
+    is_prime = True
+    
+    for j in range(2, int(num_to_check**0.5) + 1):
+        if num_to_check % j == 0: 
+            is_prime = False
+            break
+
+    if is_prime:
+        print(num_to_check, end=" ")
